@@ -1,0 +1,102 @@
+---------------- TIMING PROFILE ---------------------
+  Case        : {case}
+  LID         : {LID}
+  Machine     : {machine}
+  Caseroot    : {caseroot}
+  Timeroot    : {Timeroot}
+  User        : {user}
+  Curr Date   : Mon Jan 23 05:45:12 2017
+  grid        : {grid}
+  compset     : {compset}
+  run_type    : {run_type}
+  stop_option : {stop_option}
+  run_length  : {run_length} days (730.0 for ocean)
+
+  component       comp_pes    root_pe   tasks  x threads instances (stride) 
+  ---------        ------     -------   ------   ------  ---------  ------  
+  cpl = {component_cpl:^} {comp_pes_cpl:^} {root_pe_cpl:^} {tasks_cpl:^} x {threads_cpl:^} {instances_cpl:^} ({stride_cpl:^}) 
+  glc = {component_glc:^} {comp_pes_glc:^} {root_pe_glc:^} {tasks_glc:^} x {threads_glc:^} {instances_glc:^} ({stride_glc:^}) 
+  wav = {component_wav:^} {comp_pes_wav:^} {root_pe_wav:^} {tasks_wav:^} x {threads_wav:^} {instances_wav:^} ({stride_wav:^}) 
+  lnd = {component_lnd:^} {comp_pes_lnd:^} {root_pe_lnd:^} {tasks_lnd:^} x {threads_lnd:^} {instances_lnd:^} ({stride_lnd:^}) 
+  rof = {component_rof:^} {comp_pes_rof:^} {root_pe_rof:^} {tasks_rof:^} x {threads_rof:^} {instances_rof:^} ({stride_rof:^}) 
+  ice = {component_ice:^} {comp_pes_ice:^} {root_pe_ice:^} {tasks_ice:^} x {threads_ice:^} {instances_ice:^} ({stride_ice:^}) 
+  atm = {component_atm:^} {comp_pes_atm:^} {root_pe_atm:^} {tasks_atm:^} x {threads_atm:^} {instances_atm:^} ({stride_atm:^}) 
+  ocn = {component_ocn:^} {comp_pes_ocn:^} {root_pe_ocn:^} {tasks_ocn:^} x {threads_ocn:^} {instances_ocn:^} ({stride_ocn:^}) 
+
+  total pes active           : {total_pes_active}
+  pes per node               : {pes_per_node}
+  pe count for cost estimate : {pe_count}
+
+  Overall Metrics: 
+    Model Cost: {model_cost:^}   pe-hrs/simulated_year 
+    Model Throughput: {model_throughput:^}   simulated_years/day 
+
+    Init Time   : {init_time_seconds:^} seconds 
+    Run Time    : {run_time_seconds:^} seconds {run_time_seconds_per_day:^} seconds/day 
+    Final Time  : {final_time:^} seconds 
+
+    Actual Ocn Init Wait Time     :      21.560 seconds 
+    Estimated Ocn Init Run Time   :       0.000 seconds 
+    Estimated Run Time Correction :       0.000 seconds 
+      (This correction has been applied to the ocean and total run times) 
+
+Runs Time in total seconds, seconds/model-day, and model-years/wall-day 
+CPL Run Time represents time in CPL pes alone, not including time associated with data exchange with other components 
+
+    TOT Run Time:   25450.769 seconds       34.864 seconds/mday         6.79 myears/wday 
+    LND Run Time:    3304.217 seconds        4.526 seconds/mday        52.30 myears/wday 
+    ROF Run Time:     223.306 seconds        0.306 seconds/mday       773.83 myears/wday 
+    ICE Run Time:    1348.393 seconds        1.847 seconds/mday       128.15 myears/wday 
+    ATM Run Time:   18644.685 seconds       25.541 seconds/mday         9.27 myears/wday 
+    OCN Run Time:   22888.180 seconds       31.354 seconds/mday         7.55 myears/wday 
+    GLC Run Time:     218.970 seconds        0.300 seconds/mday       789.15 myears/wday 
+    WAV Run Time:    2326.989 seconds        3.188 seconds/mday        74.26 myears/wday 
+    CPL Run Time:    1393.564 seconds        1.909 seconds/mday       124.00 myears/wday 
+    CPL COMM Time:   5173.414 seconds        7.087 seconds/mday        33.40 myears/wday 
+
+
+---------------- DRIVER TIMING FLOWCHART --------------------- 
+
+   NOTE: min:max driver timers (seconds/day):   
+                            CPL (pes 0 to 863) 
+                                                                                       OCN (pes 864 to 1023) 
+                                                LND (pes 0 to 607) 
+                                                ROF (pes 0 to 607) 
+                                                                            ICE (pes 608 to 863) 
+                                                ATM (pes 0 to 863) 
+                                                GLC (pes 0 to 863) 
+                                                WAV (pes 0 to 159) 
+
+  CPL:CLOCK_ADVANCE           0.006:   0.007 
+  CPL:ICE_RUN                                                                 1.560:   1.847 
+  CPL:LND_RUN                                     3.197:   4.526 
+  CPL:ROF_RUN                                     0.086:   0.306 
+  CPL:WAV_RUN                                     1.256:   3.188 
+  CPL:OCN_RUN                                                                           31.304:  31.354 
+  CPL:ATM_RUN                                    25.053:  25.541 
+  CPL:GLC_RUN                                     0.093:   0.300 
+  CPL:TPROF_WRITE             0.000:   0.000 
+  CPL:RUN_LOOP_BSTOP          0.000:   0.051 
+
+
+More info on coupler timing:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+---------------- TIMING PROFILE ---------------------
+  Case        : b.e20.BHIST.f09_g16.20thC.125
+  LID         : 170122-223715
+  Machine     : yellowstone
+  Caseroot    : /glade/p/cesmdata/cseg/runs/cesm2_0/b.e20.BHIST.f09_g16.20thC.125
+  Timeroot    : /glade/p/cesmdata/cseg/runs/cesm2_0/b.e20.BHIST.f09_g16.20thC.125/Tools
+  User        : jet
+  Curr Date   : Mon Jan 23 05:45:12 2017
+  grid        : a%0.9x1.25_l%0.9x1.25_oi%gx1v6_r%r05_m%gx1v6_g%gland4_w%ww3a
+  compset     : 
+  run_type    : hybrid, continue_run = TRUE (inittype = FALSE)
+  stop_option : nyears, stop_n = 2
+  run_length  : 730 days (730.0 for ocean)
+
+  component       comp_pes    root_pe   tasks  x threads instances (stride) 
+  ---------        ------     -------   ------   ------  ---------  ------  
+  cpl = cpl        864         0        864    x 1       1      (1     ) 
+  glc = cism       864         0        864    x 1       1      (1     ) 
+  wav = ww         160         0        160    x 1       1      (1     ) 
+  lnd = clm        608         0        608    x 1       1      (1     ) 
+  rof = mosart     608         0        608    x 1       1      (1     ) 
+  ice = cice       256         608      256    x 1       1      (1     ) 
+  atm = cam        864         0        864    x 1       1      (1     ) 
+  ocn = pop        160         864      160    x 1       1      (1     ) 
+
+  total pes active           : 1024 
+  pes per node               : 16 
+  pe count for cost estimate : 1024 
+
+  Overall Metrics: 
+    Model Cost:            3619.66   pe-hrs/simulated_year 
+    Model Throughput:         6.79   simulated_years/day 
+
+    Init Time   :     125.112 seconds 
+    Run Time    :   25450.769 seconds       34.864 seconds/day 
+    Final Time  :       0.116 seconds 
+
+    Actual Ocn Init Wait Time     :      21.560 seconds 
+    Estimated Ocn Init Run Time   :       0.000 seconds 
+    Estimated Run Time Correction :       0.000 seconds 
+      (This correction has been applied to the ocean and total run times) 
+
+Runs Time in total seconds, seconds/model-day, and model-years/wall-day 
+CPL Run Time represents time in CPL pes alone, not including time associated with data exchange with other components 
+
+    TOT Run Time:   25450.769 seconds       34.864 seconds/mday         6.79 myears/wday 
+    LND Run Time:    3304.217 seconds        4.526 seconds/mday        52.30 myears/wday 
+    ROF Run Time:     223.306 seconds        0.306 seconds/mday       773.83 myears/wday 
+    ICE Run Time:    1348.393 seconds        1.847 seconds/mday       128.15 myears/wday 
+    ATM Run Time:   18644.685 seconds       25.541 seconds/mday         9.27 myears/wday 
+    OCN Run Time:   22888.180 seconds       31.354 seconds/mday         7.55 myears/wday 
+    GLC Run Time:     218.970 seconds        0.300 seconds/mday       789.15 myears/wday 
+    WAV Run Time:    2326.989 seconds        3.188 seconds/mday        74.26 myears/wday 
+    CPL Run Time:    1393.564 seconds        1.909 seconds/mday       124.00 myears/wday 
+    CPL COMM Time:   5173.414 seconds        7.087 seconds/mday        33.40 myears/wday 
+
+
+---------------- DRIVER TIMING FLOWCHART --------------------- 
+
+   NOTE: min:max driver timers (seconds/day):   
+                            CPL (pes 0 to 863) 
+                                                                                       OCN (pes 864 to 1023) 
+                                                LND (pes 0 to 607) 
+                                                ROF (pes 0 to 607) 
+                                                                            ICE (pes 608 to 863) 
+                                                ATM (pes 0 to 863) 
+                                                GLC (pes 0 to 863) 
+                                                WAV (pes 0 to 159) 
+
+  CPL:CLOCK_ADVANCE           0.006:   0.007 
+  CPL:ICE_RUN                                                                 1.560:   1.847 
+  CPL:LND_RUN                                     3.197:   4.526 
+  CPL:ROF_RUN                                     0.086:   0.306 
+  CPL:WAV_RUN                                     1.256:   3.188 
+  CPL:OCN_RUN                                                                           31.304:  31.354 
+  CPL:ATM_RUN                                    25.053:  25.541 
+  CPL:GLC_RUN                                     0.093:   0.300 
+  CPL:TPROF_WRITE             0.000:   0.000 
+  CPL:RUN_LOOP_BSTOP          0.000:   0.051 
+
+
+More info on coupler timing:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

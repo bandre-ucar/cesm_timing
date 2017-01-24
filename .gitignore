@@ -1,0 +1,10 @@
+# editor files
+*.swp
+*~
+
+# python
+*.pyc
+env/
+build/
+dist/
+*.egg-info/
